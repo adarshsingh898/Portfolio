@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      justify-content: center;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      align-items: center;
+      transition: all 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+        min-height: 100vh;
+
+
+    }
+
+    /* ------------------- NAVBAR ------------------- */
+    .navbar {
+      width: 100%;
+      background-color: #fff;
+      color: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .navbar .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar ul li a {
+      color: #000;
+      text-decoration: none;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #000;
+    }
+.contact-card {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  max-width: 1050px;
+  width: 100%;
+  text-align: center;
+  margin: 40px auto;
+  box-sizing: border-box;
+}
+
+.contact-card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card p.intro {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #f9fafb;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  text-align: left;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  background-color: #f1f5f9;
+}
+
+.icon-container {
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: linear-gradient(45deg, #60a5fa, #3b82f6);
+  color: #ffffff;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.contact-text h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.contact-text p, .contact-text a {
+  font-size: 0.9rem;
+  color: #6b7280;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.contact-text a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-text a:hover {
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width: 600px) {
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  .icon-container {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.2rem;
+  }
+
+  .contact-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-card p.intro {
+    font-size: 0.95rem;
+    padding: 0;
+  }
+
+  .contact-text h4 {
+    font-size: 1.1rem;
+  }
+
+  .contact-text p, .contact-text a {
+    font-size: 0.85rem;
+  }
+}
+
+
+     
+
+
+    
+    @media (max-width: 768px) {
+      .navbar ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        display: none;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+
+      .navbar ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+.container {
+  max-width: 1024px;
+  width: 90%;
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+              0 10px 15px rgba(0, 0, 0, 0.1);
+  margin: 40px auto; /* centers container horizontally */
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 2.5rem; /* 40px */
+}
+
+/* Projects Grid and Item Styling */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+              0 1px 2px rgba(0, 0, 0, 0.24);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  flex: 1 1 45%; /* About half width on desktop */
+  max-width: 450px;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+              0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+h3 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.project-skills {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  color: #3b82f6; /* Blue for the skills */
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  color: #4b5563;
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .project-card {
+    flex: 1 1 48%; /* Slightly smaller on tablets */
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .project-card {
+    flex: 1 1 100%; /* Full width on small devices */
+    max-width: 100%;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  .project-skills {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
+     
+       
+    /* ------------------- MAIN SECTION ------------------- */
+    .task2 {
+      width: 90%;
+      max-width: 1200px;
+      min-height: 70vh;
+      background-color: white;
+      border: 3px solid black;
+      border-radius: 40px;
+      position: relative;
+      overflow: hidden;
+      margin: 100px auto 40px;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+    
+
+    .task3 {
+      width: 100%;
+      height: 120px;
+      background-image: url('key.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+    }
+
+    .content-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .profile {
+      flex: 1 1 60%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-image: url('1671359524612.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-color: #3498db;
+      border: 3px solid white;
+      aspect-ratio: 1 / 1;
+    }
+
+    .profile-details {
+      flex: 1;
+    }
+
+    .profile-details h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .profile-details p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .location {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .button a {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #3498db;
+      color: white;
+      border-radius: 5px;
+      font-size: 14px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button a:hover {
+      background-color: #2980b9;
+    }
+    .quick2{
+      flex: 1 1 35%;
+      background-color: #e0e0e0;
+      border-radius: 15px;
+      padding: 20px;
+      height: fit-content;
+      align-self: start;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    }
+    .quick2 h3{
+       margin-bottom: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .side-box { 
+      flex: 1 1 35%;
+      background-color: #e0e0e0;
+      border-radius: 15px;
+      padding: 20px;
+      height: fit-content;
+      align-self: start;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    }
+
+    .side-box h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .side-box p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .side-box a {
+      color: #0a66c2;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    /* Bottom Section */
+    .bottom-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto 60px;
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+    }
+
+    .hh1 {
+      flex: 1 1 60%;
+      border: 2px solid black;
+      border-radius: 14px;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: white;
+      min-height: 350px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hh1 h1 {
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    .part2 {
+      flex-grow: 1;
+      background-image: url('Screenshot (21).png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 0 0 14px 14px;
+      min-height: 780px;
+    }
+
+    .part3 {
+      flex: 1 1 35%;
+      background-image: url('Screenshot (22).png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 14px;
+      border: 2px solid black;
+      min-height: 350px;
+    }
+
+    .part5 {
+      width: 90%;
+      max-width: 1200px;
+      margin: 40px auto;
+      border: 2px solid black;
+      border-radius: 10px;
+    }
+
+    .part5 img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .container9 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto;
+      gap: 20px;
+    }
+
+    .cont10,
+    .cont11 {
+      flex: 1 1 48%;
+      border: 2px solid black;
+      border-radius: 2px;
+    }
+
+    .cont10 img,
+    .cont11 img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+
+
+    .education-timeline-section {
+        width: 95%;
+        max-width: 1200px;
+        margin: 15px auto;
+        padding: 20px;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 14px;
+    }
+    
+    .education-timeline-section h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* The main timeline vertical line */
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: #3498db;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+    }
+    
+    .timeline-container {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+    }
+    
+    /* Circles on the timeline line */
+    .timeline-container::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -17px;
+        background-color: white;
+        border: 4px solid #FF9F55;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    
+    .timeline-left {
+        left: 0;
+    }
+    
+    .timeline-right {
+        left: 50%;
+    }
+    
+    /* The container content */
+    .timeline-content {
+        padding: 20px 30px;
+        background-color: #f1f1f1;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .timeline-content h3 {
+        font-size: 18px;
+        color: #007bff;
+        margin-bottom: 5px;
+    }
+
+    .timeline-content p {
+        font-size: 14px;
+        color: #555;
+        margin: 5px 0;
+    }
+    
+    .timeline-content .institution {
+        font-weight: bold;
+    }
+
+    /* Arrows on the timeline content */
+    .timeline-left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #f1f1f1;
+    }
+    
+    .timeline-right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #f1f1f1 transparent transparent;
+    }
+    
+    /* The right side dot needs to be on the left of the container */
+    .timeline-right::after {
+        left: -16px;
+    }
+    
+    /* Responsive layout for mobile */
+    @media screen and (max-width: 768px) {
+        /* The main timeline vertical line should be on the left */
+        .timeline::after {
+            left: 31px;
+        }
+        
+        /* All containers should be full width */
+        .timeline-container {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+        
+        /* All content should be on the right side of the line */
+        .timeline-right {
+            left: 0%;
+        }
+        
+        .timeline-left::after, .timeline-right::after {
+            left: 15px;
+        }
+
+        .timeline-left::before {
+            left: 60px;
+            border-color: transparent #f1f1f1 transparent transparent;
+        }
+
+        .timeline-right::before {
+            left: 60px;
+            border-color: transparent #f1f1f1 transparent transparent;
+        }
+
+        .timeline-left .timeline-content, .timeline-right .timeline-content {
+            text-align: left;
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 998px) {
+      .bottom-container {
+        flex-direction: column;
+      }
+
+      .hh1,
+      .part3 {
+         flex: 1 1 100%;
+  height: auto;
+  margin-bottom: 20px;
+  margin-left: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+      }
+
+      .part2, .part3 {
+        background-size: contain;
+        min-height: 300px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .task2, .bottom-container {
+        width: 95%;
+        margin: 80px auto 30px;
+        flex-direction: column;
+      }
+
+      .content-container {
+        flex-direction: column;
+      }
+
+      .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .profile-details {
+        text-align: center;
+      }
+
+      .circle {
+        width: 100px;
+        height: 100px;
+      }
+
+      .profile-details h2 {
+        font-size: 18px;
+      }
+
+      .profile-details p {
+        font-size: 14px;
+      }
+
+      .location {
+        font-size: 13px;
+      }
+
+      .side-box,
+      .hh1,
+      .part3 {
+        flex: 1 1 100%;
+        height: auto;
+        margin-bottom: 20px;
+        margin-left: 78px;
+      }
+
+      .container9 {
+        flex-direction: column;
+      }
+
+      .cont10,
+      .cont11 {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hh1 h1 {
+        margin: 10px;
+        font-size: 1.4rem;
+      }
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- ✅ NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">MyPortfolio</div>
+    <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+    <ul id="nav-links">
+      <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+      <!-- <li><a href="#"><i class="fas fa-briefcase"></i> Projects</a></li>
+      <li><a href="#"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li> -->
+    </ul>
+  </nav>
+
+  <!-- ✅ MAIN SECTION -->
+  <div class="task2">
+    <div class="task3"></div>
+
+    <div class="content-container">
+      <div class="profile">
+        <div class="circle"></div>
+        <div class="profile-details">
+          <h2>Adarsh Pratap Singh</h2>
+          <p>“Innovative Web Designer | Making Websites That Work Great and Look Amazing | Turning Ideas into Beautiful Websites and a keen eye for detail through manual testing to ensure flawless user experiences.”</p>
+          <p class="location"><b>Noida, Uttar Pradesh, India</b></p>
+          <div class="button">
+            <a href="Adarsh_pratap_singh_Resume (10).pdf" target="_blank" download>Download Resume</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-box">
+        <h3>Quick Info</h3>
+        <p><strong>Connections:</strong> 500+</p>
+        <p><strong>Status:</strong> Open to work</p>
+        <p><strong>Public profile URL:</strong> <br>
+          <a href="https://www.linkedin.com/in/adarsh9999/" target="_blank">linkedin.com/in/adarsh9999</a>
+        </p>
+      </div>
+    </div>
+     <div class="quick2">
+        <h3>Skills-</h3>
+        <p><strong>Website Development:</strong> HTML,CSS,JS</p>
+        <p><strong>Software Testing:</strong>Manual Tesing/Jira</p>
+        <p><strong>Database:</strong>MySql</p>
+        <p><strong>Programming Language:</strong>Python</p>
+      
+      </div>
+    </div>
+  </div>
+  </div>
+
+  
+
+  <!-- Bottom container -->
+  <div class="bottom-container">
+    <div class="hh1">
+      <h1>Activity -</h1>
+      <div class="part2"></div>
+    </div>
+
+    <div class="part3"></div>
+  </div>
+
+  <div class="part5">
+    <img src="Screenshot (27).png" alt="Project Screenshot">
+  </div>
+
+  <div class="container9">
+    <div class="cont10">
+      <img src="Screenshot (26).png" alt="Certificate 1">
+    </div>
+
+    <div class="cont11">
+      <img src="cer1.jpg" alt="Certificate 2">
+    </div>
+  </div>
+<div class="education-timeline-section">
+    <h2>My Education</h2>
+    <div class="timeline">
+        <!-- Item 1: MCA -->
+        <div class="timeline-container timeline-right">
+            <div class="timeline-content">
+                <h3>Master of Computer Applications (MCA)</h3>
+                <p class="institution">Noida Institute of Engineering and Technology, Greater Noida</p>
+                <p class="dates">2024 - Present</p>
+            </div>
+        </div>
+        <!-- Item 2: BCA -->
+        <div class="timeline-container timeline-left">
+            <div class="timeline-content">
+                <h3>Bachelor of Computer Applications (BCA)</h3>
+                <p class="institution">Dr. Virendra Swarup, Kanpur</p>
+                <p class="dates">2020 - 2024</p>
+            </div>
+        </div>
+        <!-- Item 3: Intermediate -->
+        <div class="timeline-container timeline-right">
+            <div class="timeline-content">
+                <h3>Intermediate (12th Grade)</h3>
+                <p class="institution">Your School Name Here</p>
+                <p class="dates">Completed in 2021</p>
+            </div>
+        </div>
+        <!-- Item 4: High School -->
+        <div class="timeline-container timeline-left">
+            <div class="timeline-content">
+                <h3>High School (10th Grade)</h3>
+                <p class="institution">Your School Name Here</p>
+                <p class="dates">Completed in 2019</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <div class="container">
+        <h2>Featured Projects</h2>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+            
+            <!-- Project 1: Manual Testing -->
+            <div class="project-card">
+                <h3>Manual Testing - Educase India & Amrutam</h3>
+                <p class="project-skills">Testing | Usability | Bug Reporting</p>
+                <ul>
+                    <li>Wrote detailed test cases and executed functional and usability tests.</li>
+                    <li>Identified and documented bugs across web and mobile versions of the platforms.</li>
+                    <li>Contributed to improving the overall UI/UX and performance by documenting bugs with severity levels.</li>
+                    <li>Gained experience with a school ERP and a health and wellness e-commerce website.</li>
+                </ul>
+            </div>
+
+            <!-- Project 2: News Portal Website -->
+            <div class="project-card">
+                <h3>News Portal Website</h3>
+                <p class="project-skills">HTML, CSS, JS, PHP, MySQL</p>
+                <ul>
+                    <li>Developed a news portal platform as a digital version of a newspaper or magazine.</li>
+                    <li>Created a dynamic website capable of providing real-time news updates and a wide range of articles.</li>
+                    <li>Utilized a full-stack approach with HTML, CSS, JavaScript for the frontend and PHP with MySQL for the backend.</li>
+                    <li>Learned to manage a database and handle content delivery for an online audience.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+ <div class="contact-card">
+        <h2>Get in Touch</h2>
+        <p class="intro">
+            I'd love to hear from you. Feel free to reach out to me directly through any of the channels below to discuss new projects or ideas.
+        </p>
+        <div class="contact-list">
+            <div class="contact-item">
+                <div class="icon-container">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-text">
+                    <h4>Email Address</h4>
+                    <p>adarshsingh1769@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="icon-container">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contact-text">
+                    <h4>Phone Number</h4>
+                    <p>9598804457</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="icon-container">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div class="contact-text">
+                    <h4>LinkedIn Profile</h4>
+                    <p>
+                        <a href="https://www.linkedin.com/in/adarsh9999/" target="_blank">
+                            linkedin.com/in/adarsh9999/
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- ✅ JavaScript for Mobile Menu -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("show");
+
+      const menuToggle = document.querySelector('.menu-toggle');
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+    }
+
+    document.querySelectorAll('#nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        const navLinks = document.getElementById("nav-links");
+        if (navLinks.classList.contains('show')) {
+          navLinks.classList.remove('show');
+          const menuToggle = document.querySelector('.menu-toggle');
+          menuToggle.setAttribute('aria-expanded', false);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
